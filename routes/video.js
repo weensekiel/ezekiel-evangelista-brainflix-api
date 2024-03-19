@@ -1,4 +1,5 @@
 import express from "express";
+import { uuid } from "uuidv4";
 import videos from "../data/videos.json" assert {type: "json"};
 import details from "../data/video-details.json" assert {type: "json"};
 
@@ -9,7 +10,16 @@ router.get("/", (req, res) => {
 })
 
 router.get("/:id", (req, res) => {
-    res.send(details.filter(video => video.id === req.params.id));
+    res.json(details.filter(video => video.id === req.params.id));
+})
+
+router.post("/", (req, res) => {
+    const newVideo = {
+        title: "title",
+        channel: "Ezekiel Evangelista",
+        image: "img src",
+        id: uuid()
+    };
 })
 
 export default router;
