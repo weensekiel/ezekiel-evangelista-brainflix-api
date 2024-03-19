@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/videos", videoRoutes);
+app.use("/:id", videoRoutes);
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
