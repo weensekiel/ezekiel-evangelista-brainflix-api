@@ -35,17 +35,23 @@ router.get("/:id", (req, res) => {
 })
 
 router.post("/", (req, res) => {
-    const { title, channel } = req.body;
+    const { title, description } = req.body;
 
-    if (!title || ! channel) {
-        return res.status(404).send("Title/channel is missing. Please provide a title or channel name");
+    if (!title || !description) {
+        return res.status(404).send("Title/description is missing. Please provide a title or description");
     }
 
     const newVideo = {
         id: uuid(),
         title,
-        channel,
-        image: "../public/images/cat.png"
+        channel: "Ezekiel Evangelista",
+        image: "https://pixabay.com/photos/cat-kitten-pet-kitty-young-cat-551554/",
+        description,
+        views: "420,420",
+        likes: "420,69",
+        duration: "5:23",
+        timestamp: Date.now(),
+        comments: [],
     };
 
     const videos = readData();

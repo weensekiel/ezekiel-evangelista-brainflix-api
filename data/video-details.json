@@ -294,9 +294,15 @@
         ]
     },
     {
-        "id": "31553e04-375e-4fa3-8a36-9018dbee8e9e",
-        "title": "cat video",
+        "id": "0d99fc0f-c87f-4194-8c73-0efad21cb9c5",
+        "title": "wahoo",
         "channel": "Ezekiel Evangelista",
-        "image": "../public/images/cat.png"
+        "image": "https://pixabay.com/photos/cat-kitten-pet-kitty-young-cat-551554/",
+        "description": "its a me",
+        "views": "420,420",
+        "likes": "420,69",
+        "duration": "5:23",
+        "timestamp": 1711154232006,
+        "comments": []
     }
 ]
